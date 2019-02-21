@@ -1,0 +1,57 @@
+<html>
+
+
+<body>
+
+<script>
+//HIGHER ORDER FUNCTION
+
+var an=[
+{name:'Bruce',species:'dog'},
+{name:'Scot',species:'dog'},
+{name:"Ace",species:'dog'},
+{name:'Squish',species:'cat'},
+{name:'jim',species:'cat'},
+{name:'tuffy',species:'cat'},
+{name:'fluffy',species:'fish'},
+]
+//FILTER
+var z=function(animals){
+  return animals.species==='cat';
+}
+var ans=an.filter(z);
+
+console.log(ans)
+//MAP
+var names=an.map(function(animals){
+  return animals.name;
+
+})
+console.log(names);
+//REDUCE
+var amt=[
+{amt:100},
+{amt:200},
+{amt:300},
+{amt:400}
+]
+
+var tot=amt.reduce(function(sum,or){
+  return sum+or.amt;
+},0)
+
+console.log(tot)
+var ans2=[0, 1, 2, 3, 4].reduce(function(accumulator, currentValue, currentIndex, array) {
+  return accumulator + currentValue;
+});
+console.log(ans2)
+//promise
+let promise=fetch('https://cors.io/?https://javascript.info/promise-basics').then(function(da){
+  console.log(da)
+})
+
+
+
+</script>
+</body>
+</html>
