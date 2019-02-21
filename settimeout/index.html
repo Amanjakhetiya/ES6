@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+setInterval(()=>{
+console.log('hi everyone')
+},1000)//Will log hi everyone on console after every 1 second after event loop is free
+for(var i=0;i<999;i++)
+{
+    console.log(i);
+}
+setTimeout(()=>{
+    console.log('bye everyone')
+},10000)//Will execute after 10 seconds only after event loop is free
+
+</script>
+</html>
